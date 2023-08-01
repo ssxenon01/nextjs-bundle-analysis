@@ -8,7 +8,7 @@
     "compare": "./compare.js"
   },
   "scripts": {
-    "test": "jest",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider jest",
     "release": "changeset publish",
     "release:canary": "changeset publish --tag canary"
   },

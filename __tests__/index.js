@@ -32,9 +32,9 @@ describe('sort of integration', () => {
         execSync('npm run build')
       })
 
-      afterEach(() => {
-        rimraf.sync(path.join(cwd, buildOutputDirectory))
-      })
+      // afterEach(() => {
+      //   rimraf.sync(path.join(cwd, buildOutputDirectory))
+      // })
 
       test(`bundle analysis action generates report and compares artifacts correctly ${dirName}`, () => {
         // make sure the 'report' command works
@@ -73,7 +73,7 @@ describe('sort of integration', () => {
           ),
           'utf8'
         )
-        expect(comment).toMatch(/no changes to the javascript bundle/)
+        expect(comment).toMatch(/This PR introduced no changes to the JavaScript bundle! 🙌/)
       })
     })
   })
